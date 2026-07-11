@@ -15,3 +15,13 @@ A simple project demonstrating how different languages work together.
 1. Run the Python script: `python data_generator.py`.
 2. Use the `schema.sql` file to set up your database.
 3. Open `index.html` in your browser to view the dashboard.
+4. ## Engineering Standards Implemented
+- **Robustness**: Implemented exponential backoff retries to handle transient API failures.
+- **Security**: Used environment variables via `.env` to prevent credential exposure.
+- **Portability**: Containerized using Docker to ensure environment consistency.
+- my-project/
+├── .env                # Stores API keys/DB URLs (keep this secret!)
+├── docker-compose.yml  # Manages the container
+├── Dockerfile          # Defines the environment
+├── pipeline.py         # The upgraded Python script
+└── requirements.txt    # Project dependencies
