@@ -1,0 +1,6 @@
+version: '3.8'
+services:
+  pipeline:
+    build: .
+    environment:
+      - MY_API_KEY=your_secure_key_here
