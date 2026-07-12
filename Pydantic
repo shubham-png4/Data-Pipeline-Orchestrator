@@ -1,0 +1,14 @@
+# Add this to your pipeline.py
+from pydantic import BaseModel, ValidationError
+
+class DataSchema(BaseModel):
+    id: int
+    name: str
+    value: float
+
+def validate_data(data):
+    try:
+        return DataSchema(**data)
+    except ValidationError as e:
+        print(f"Validation Error: {e}")
+        return None
